@@ -1,7 +1,7 @@
 let x = 200;
 let y = 200;
 let w = 50;
-let angle;
+let angle = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -9,13 +9,19 @@ function setup() {
 }
 
 function draw() {
+  background(200);
+  layout();
   rotation();
   print("working");
 }
 
+function layout() {
+  ellipse(windowWidth / 2, windowHeight / 2, 100);
+}
+
 function rotation() {
-  translate(200, 200);
+  translate(windowWidth / 2, windowHeight / 2);
   rotate(angle);
-  angle = angle + 1;
+  angle += 0.01;
   ellipse(100, 100, 50, 50);
 }

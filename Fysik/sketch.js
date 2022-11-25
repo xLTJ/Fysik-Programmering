@@ -12,20 +12,10 @@ function setup() {
 }
 
 function draw() {
-  background(200);
+  background(255);
   layout();
   rotation();
-
-  if (mouseIsPressed == true) {
-    if (mouseButton == LEFT) {
-      let playOnce = false;
-      if (playOnce == false) {
-        electronDistance += 1;
-        playOnce = true;
-        print(playOnce);
-      }
-    }
-  }
+  eletronJump();
 }
 
 //midten og ringene etc.
@@ -52,11 +42,16 @@ function createRing(Distance) {
 }
 
 function eletronJump() {
-  if (mouseIsPressed == true) {
-    if (mouseButton == LEFT) {
-      electronDistance += 1;
-    }
+  if (keyIsDown(49)) {
+    electronDistance = 2;
+  }
+  if (keyIsDown(50)) {
+    electronDistance = 3;
+  }
+  if (keyIsDown(51)) {
+    electronDistance = 4;
+  }
+  if (keyIsDown(52)) {
+    electronDistance = 5;
   }
 }
-
-//ok

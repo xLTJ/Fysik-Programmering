@@ -5,7 +5,6 @@ let angle = 0;
 let ringDist = 100; //standart ring distance fra centrum
 let rotationSpeed = 0.01; //siger sig selv
 let electronDistance = 2; //hvilken ring elektronen er i
-let test = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -17,10 +16,15 @@ function draw() {
   layout();
   rotation();
 
-  test += 1;
-  print(test);
-  if (test > 500) {
-    eletronDistance += 1;
+  if (mouseIsPressed == true) {
+    if (mouseButton == LEFT) {
+      let playOnce = false;
+      if (playOnce == false) {
+        electronDistance += 1;
+        playOnce = true;
+        print(playOnce);
+      }
+    }
   }
 }
 
@@ -50,7 +54,7 @@ function createRing(Distance) {
 function eletronJump() {
   if (mouseIsPressed == true) {
     if (mouseButton == LEFT) {
-      eletronDistance += 1;
+      electronDistance += 1;
     }
   }
 }

@@ -16,14 +16,16 @@ function draw() {
 }
 
 function layout() {
+  fill("white");
   ellipse(windowWidth / 2, windowHeight / 2, 100);
+  noFill();
+  ellipse(windowWidth / 2, windowHeight / 2, 290);
 }
 
 function rotation() {
+  fill("white");
   translate(windowWidth / 2, windowHeight / 2);
   rotate(angle);
   angle += 0.01;
   ellipse(100, 100, 50, 50);
 }
-
-//tissemænd

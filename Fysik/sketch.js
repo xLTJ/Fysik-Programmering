@@ -19,7 +19,7 @@ function layout() {
   fill("white");
   ellipse(windowWidth / 2, windowHeight / 2, 100);
   noFill();
-  ellipse(windowWidth / 2, windowHeight / 2, 290);
+  ellipse(windowWidth / 2, windowHeight / 2, 400);
 }
 
 function rotation() {
@@ -27,7 +27,7 @@ function rotation() {
   translate(windowWidth / 2, windowHeight / 2);
   rotate(angle);
   angle += 0.01;
-  ellipse(100, 100, 50, 50);
+  ellipse(200, 0, 50, 50);
 }
 
 //ok

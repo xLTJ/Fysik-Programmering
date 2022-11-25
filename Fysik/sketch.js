@@ -2,6 +2,9 @@ let x = 200;
 let y = 200;
 let w = 50;
 let angle = 0;
+let ring1Dist = 200;
+let rotationSpeed = 0.01;
+let electronDistance = 1;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -16,18 +19,18 @@ function draw() {
 }
 
 function layout() {
-  fill("white");
+  fill(199, 0, 57);
   ellipse(windowWidth / 2, windowHeight / 2, 100);
   noFill();
-  ellipse(windowWidth / 2, windowHeight / 2, 400);
+  ellipse(windowWidth / 2, windowHeight / 2, ring1Dist * 2);
 }
 
 function rotation() {
-  fill("white");
+  fill(46, 134, 193);
   translate(windowWidth / 2, windowHeight / 2);
   rotate(angle);
-  angle += 0.01;
-  ellipse(200, 0, 50, 50);
+  angle += rotationSpeed;
+  ellipse(electronDistance * 200, 0, 50, 50);
 }
 
 //ok

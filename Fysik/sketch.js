@@ -4,7 +4,7 @@ let w = 50;
 let angle = 0;
 let ringDist = 100; //standart ring distance fra centrum
 let rotationSpeed = 0.01; //siger sig selv
-let electronDistance = 2; //hvilken ring elektronen er i
+let electronDistance = 1; //hvilken ring elektronen er i
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -33,7 +33,7 @@ function rotation() {
   translate(windowWidth / 2, windowHeight / 2);
   rotate(angle);
   angle += rotationSpeed;
-  ellipse((electronDistance * ringDist) / 2, 0, 25);
+  ellipse(((electronDistance + 1) * ringDist) / 2, 0, 25);
 }
 
 function createRing(Distance) {
@@ -43,15 +43,15 @@ function createRing(Distance) {
 
 function eletronJump() {
   if (keyIsDown(49)) {
-    electronDistance = 2;
+    electronDistance = 1;
   }
   if (keyIsDown(50)) {
-    electronDistance = 3;
+    electronDistance = 2;
   }
   if (keyIsDown(51)) {
-    electronDistance = 4;
+    electronDistance = 3;
   }
   if (keyIsDown(52)) {
-    electronDistance = 5;
+    electronDistance = 4;
   }
 }

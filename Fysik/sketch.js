@@ -25,3 +25,5 @@ function rotation() {
   angle += 0.01;
   ellipse(100, 100, 50, 50);
 }
+
+//tissemænd
